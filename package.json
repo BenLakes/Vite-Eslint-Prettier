@@ -10,7 +10,9 @@
     "format": "prettier --write ./**/*.{vue,ts,tsx,js,jsx,css,less,scss,json,md}",
     "prepare": "husky install"
   },
-  "lint-staged": {},
+  "lint-staged": {
+      "src/**/*.{js,jsx,ts,.tsx,vue,html,md}": "eslint --config .eslintrc.js"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
